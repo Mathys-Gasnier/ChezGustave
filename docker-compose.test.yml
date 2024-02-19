@@ -3,11 +3,10 @@ version: '3'
 services:
   server:
     build:
-      context: server
-      dockerfile: ../Dockerfile
+      context: ./server
     command: composer test
     ports:
-      - 80:80
+      - 3630:3630
     volumes:
       - ./server:/var/www/html
     depends_on:
