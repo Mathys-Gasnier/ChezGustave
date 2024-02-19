@@ -8,10 +8,11 @@
 
 ## Templates
 
-Templates are branches of the repository.
+Templates are branches of this repository.
 
 - [Javascript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-js)
 - [Typescript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-ts)
+- [Php/CodeIgniter server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-ts)
 
 ## Starting a template
 
