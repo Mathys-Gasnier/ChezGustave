@@ -13,13 +13,13 @@ Templates are branches of the repository.
 - [Javascript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-js)
 - [Typescript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-ts)
 
-## Starting the project
+## Starting a template
 
 The only thing needed is [Docker](https://www.docker.com/products/docker-desktop/).
 
-Once you have it you can only the current folder (the only containing the README.md) in a command line.
+Go the the root of the template and run `docker compose up -d`.
 
-And run `docker compose up -d`. This should start the server and the client.
+This should start the server and the client.
 
 The server should be accessible on `localhost:3630`, and the client on `localhost:5173`.
 
@@ -31,10 +31,30 @@ If you want to close them `docker compose kill` to close the server, client and 
 
 To run server tests your need to run the `docker-compose.test.yml` instead of the normal `docker-compose.yml`
 
-To do that you should run: `docker compose up -f docker-compose.test.yml -d`.
+To do that you should run: `docker compose -f docker-compose.test.yml up -d`.
 
 ### Client
 
 To run client tests you need to start docker as normal and then `cd` into the client directory and run `npx cypress open`.
 
 This should open a browser where you can access, edit and create e2e tests.
+
+## Guidelines
+
+When you want to start working on something, be it a new feature a bug fix or tests you need to create a new branch to hold your changes.
+
+Firstly you need to create the branch by doing `git checkout -b branch_type/branch_name`.
+
+The `branch_type` should be one of: `features` for new features, `bugs` for bug fixes or `tests` for updating/adding tests.
+
+The `branch_name` should describe what's being done, some example: `features/login-page`, `bugs/fixing-the-modal-component`, ...
+
+When you have made a branch you can code as normal and commit regularly.
+
+To push your changes you can use `git push -u origin branch_name`. `branch_name` being the whole branch name with the prefix (`features`, ...).
+
+Once that is done you should be able to see the branch on the github repository.
+
+When you are ready you can then create a pull request, and wait for a review.
+
+You can always push commits to the branch when the pull request is created, they will be automaticly added to the pull request.
