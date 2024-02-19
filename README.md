@@ -6,6 +6,13 @@
 [Kanban](https://projet.errhub404.fr/?controller=BoardViewController&action=show&project_id=7)
 [Assets](https://drive.google.com/drive/folders/180yJM1hKLHpg4uTajRZUu5odq5EVkdl2?usp=drive_link)
 
+## Templates
+
+Templates are branches of the repository.
+
+- [Javascript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-js)
+- [Typescript server + React](https://github.com/Mathys-Gasnier/ChezGustave/tree/template-ts)
+
 ## Starting the project
 
 The only thing needed is [Docker](https://www.docker.com/products/docker-desktop/).
