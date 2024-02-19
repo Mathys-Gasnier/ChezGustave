@@ -1,1 +1,1 @@
-# Chez Gustave (Typescript server + React)
+# Chez Gustave (Php/CodeIgniter server + React)

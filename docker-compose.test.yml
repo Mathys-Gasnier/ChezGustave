@@ -5,18 +5,14 @@ services:
     build:
       context: server
       dockerfile: ../Dockerfile
-    command: npm run test
+    command: composer test
     ports:
-      - ${SERVER_PORT}:${SERVER_PORT}
+      - 80:80
     volumes:
-      - ./server:/usr/app
-      - /usr/app/node_modules
+      - ./server:/var/www/html
     depends_on:
       database:
         condition: service_healthy
-    environment:
-      PORT: ${SERVER_PORT}
-      DATABASE_URL: postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@database/${DATABASE_NAME}
   
   database:
     image: postgres:alpine
