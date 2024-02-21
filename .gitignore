@@ -139,7 +139,6 @@ nb-configuration.xml
 .phpintel
 /api/
 
-/results/
-/phpunit*.xml
-/.phpunit.*.cache
-
+results/
+phpunit*.xml
+.phpunit.*.cache

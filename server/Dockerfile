@@ -19,5 +19,7 @@ COPY composer.lock /var/www/html/composer.lock
 RUN a2enmod rewrite
 RUN service apache2 restart
 
+WORKDIR /var/www/html
+
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install
